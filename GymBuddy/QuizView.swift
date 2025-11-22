@@ -144,6 +144,20 @@ struct QuizView: View {
                                     .foregroundStyle(.white)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .lineSpacing(4)
+                                
+                                // NEW: Display image if available
+                                if let imageName = question.imageName {
+                                    Image(imageName)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(maxHeight: 200)
+                                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .stroke(Color.white.opacity(0.2), lineWidth: 1)
+                                        )
+                                        .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
+                                }
                             }
                             .padding(28)
                             .background(

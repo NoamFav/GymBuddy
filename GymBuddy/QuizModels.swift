@@ -1,9 +1,3 @@
-//
-//  QuizModels.swift
-//  GymBuddy
-//
-//  Created by Boss on 22/11/2025.
-//
 import SwiftUI
 
 enum QuizCategory: String, CaseIterable, Identifiable {
@@ -46,4 +40,25 @@ struct QuizQuestion: Identifiable {
     let answers: [String]
     let correctIndex: Int
     let explanation: String?
+    let imageName: String?  // NEW: Optional image asset name
+    
+    // Convenience initializer for questions without images
+    init(category: QuizCategory, question: String, answers: [String], correctIndex: Int, explanation: String? = nil) {
+        self.category = category
+        self.question = question
+        self.answers = answers
+        self.correctIndex = correctIndex
+        self.explanation = explanation
+        self.imageName = nil
+    }
+    
+    // Full initializer with image support
+    init(category: QuizCategory, question: String, answers: [String], correctIndex: Int, explanation: String?, imageName: String?) {
+        self.category = category
+        self.question = question
+        self.answers = answers
+        self.correctIndex = correctIndex
+        self.explanation = explanation
+        self.imageName = imageName
+    }
 }
