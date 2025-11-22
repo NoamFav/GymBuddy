@@ -14,7 +14,7 @@ struct QuizView: View {
     }
     
     var isQuizComplete: Bool {
-        currentIndex >= questions.count
+        !questions.isEmpty && currentIndex >= questions.count
     }
     
     var progress: Double {

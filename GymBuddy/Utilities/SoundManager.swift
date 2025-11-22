@@ -10,6 +10,7 @@ class SoundManager: ObservableObject {
     
     private init() {
         setupAudioSession()
+        preloadSounds()
     }
     
     private func setupAudioSession() {
@@ -45,6 +46,26 @@ class SoundManager: ObservableObject {
         }
     }
     
+    private func preloadSounds() {
+        // Preload all sound effects
+        for sound in [SoundEffect.correct, .wrong, .buttonTap, .completion,
+                      .completionPerfect, .completionGreat, .completionGood, .swipe] {
+            guard let url = Bundle.main.url(forResource: sound.rawValue,
+                                           withExtension: sound.fileName.components(separatedBy: ".").last) else {
+                print("Could not find sound file: \(sound.fileName)")
+                continue
+            }
+            
+            do {
+                let player = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+                players[sound.rawValue] = player
+            } catch {
+                print("Could not preload sound \(sound.rawValue): \(error)")
+            }
+        }
+    }
+
     // Play completion sound based on success percentage
     func playCompletionSound(percentage: Double) {
         let sound: SoundEffect
