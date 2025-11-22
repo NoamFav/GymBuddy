@@ -6,6 +6,8 @@ struct CompletionView: View {
     let category: QuizCategory
     let onDismiss: () -> Void
     
+    @State private var hasPlayedSound = false
+    
     var percentage: Double {
         guard total > 0 else { return 0 }
         return Double(score) / Double(total) * 100
@@ -322,6 +324,12 @@ struct CompletionView: View {
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
+            }
+        }
+        .onAppear {
+            if !hasPlayedSound {
+                hasPlayedSound = true
+                SoundManager.shared.playCompletionSound(percentage: percentage)
             }
         }
     }

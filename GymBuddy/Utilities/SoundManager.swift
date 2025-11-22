@@ -26,6 +26,9 @@ class SoundManager: ObservableObject {
         case wrong = "wrong"
         case buttonTap = "tap"
         case completion = "completion"
+        case completionPerfect = "completion_perfect"
+        case completionGreat = "completion_great"
+        case completionGood = "completion_good"
         case swipe = "swipe"
         
         var fileName: String {
@@ -34,9 +37,40 @@ class SoundManager: ObservableObject {
             case .wrong: return "wrong.mp3"
             case .buttonTap: return "tap.mp3"
             case .completion: return "completion.mp3"
+            case .completionPerfect: return "completion_perfect.mp3"
+            case .completionGreat: return "completion_great.mp3"
+            case .completionGood: return "completion_good.mp3"
             case .swipe: return "swipe.mp3"
             }
         }
+    }
+    
+    // Play completion sound based on success percentage
+    func playCompletionSound(percentage: Double) {
+        let sound: SoundEffect
+        let hapticType: UINotificationFeedbackGenerator.FeedbackType
+        
+        switch percentage {
+        case 90...100:
+            // Perfect/Outstanding
+            sound = .completionPerfect
+            hapticType = .success
+        case 70..<90:
+            // Great work
+            sound = .completionGreat
+            hapticType = .success
+        case 50..<70:
+            // Good effort
+            sound = .completionGood
+            hapticType = .warning
+        default:
+            // Keep learning
+            sound = .completion
+            hapticType = .warning
+        }
+        
+        play(sound)
+        playNotificationHaptic(hapticType)
     }
     
     func play(_ sound: SoundEffect) {
@@ -79,8 +113,12 @@ class SoundManager: ObservableObject {
             systemSoundID = 1053 // Tock sound
         case .buttonTap:
             systemSoundID = 1104 // Click sound
-        case .completion:
+        case .completion, .completionGood:
             systemSoundID = 1057 // Tink sound
+        case .completionGreat:
+            systemSoundID = 1310 // Fanfare sound
+        case .completionPerfect:
+            systemSoundID = 1322 // Triumph sound
         case .swipe:
             systemSoundID = 1104 // Click sound
         }
