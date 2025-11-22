@@ -326,3 +326,12 @@ struct CompletionView: View {
         }
     }
 }
+
+#Preview {
+    CompletionView(
+        score: 9,
+        total: 10,
+        category: .funFacts,
+        onDismiss: { print("Dismissed") }
+    )
+}

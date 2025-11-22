@@ -341,3 +341,27 @@ struct QuizView: View {
         showingResult = false
     }
 }
+
+#Preview("Fun Facts") {
+    NavigationStack {
+        QuizView(category: .funFacts)
+    }
+}
+
+#Preview("Machines") {
+    NavigationStack {
+        QuizView(category: .machines)
+    }
+}
+
+#Preview("Science") {
+    NavigationStack {
+        QuizView(category: .science)
+    }
+}
+
+#Preview("Nutrition") {
+    NavigationStack {
+        QuizView(category: .nutrition)
+    }
+}

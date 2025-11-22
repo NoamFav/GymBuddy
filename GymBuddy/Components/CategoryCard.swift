@@ -79,3 +79,30 @@ struct CategoryCard: View {
         .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isPressed)
     }
 }
+
+#Preview("Machines") {
+    ZStack {
+        Color(red: 0.1, green: 0.05, blue: 0.2)
+            .ignoresSafeArea()
+        CategoryCard(category: .machines)
+            .padding()
+    }
+}
+
+#Preview("Fun Facts") {
+    ZStack {
+        Color(red: 0.1, green: 0.05, blue: 0.2)
+            .ignoresSafeArea()
+        CategoryCard(category: .funFacts)
+            .padding()
+    }
+}
+
+#Preview("Science") {
+    ZStack {
+        Color(red: 0.1, green: 0.05, blue: 0.2)
+            .ignoresSafeArea()
+        CategoryCard(category: .science)
+            .padding()
+    }
+}
