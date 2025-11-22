@@ -2,126 +2,224 @@ import SwiftUI
 
 enum QuizData {
     static let allQuestions: [QuizQuestion] = [
-        // Machines (16 questions)
+        // Machines (30 questions)
         QuizQuestion(
             category: .machines,
             question: "What muscle group does the leg press primarily target?",
-            answers: ["Chest", "Quadriceps", "Back", "Shoulders"],
+            answers: ["Chest", "Quadriceps", "Shoulders", "Back"],
             correctIndex: 1,
             explanation: "The leg press primarily works your quads, glutes, and hamstrings."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine is best for training your lats?",
-            answers: ["Leg curl machine", "Lat pulldown", "Pec deck", "Leg extension"],
-            correctIndex: 1,
+            answers: ["Lat pulldown", "Leg curl machine", "Pec deck", "Leg extension"],
+            correctIndex: 0,
             explanation: "The lat pulldown is designed to target your latissimus dorsi muscles."
         ),
         QuizQuestion(
             category: .machines,
             question: "What does the smith machine help stabilize?",
-            answers: ["Your mood", "The barbell path", "Your diet", "Your schedule"],
-            correctIndex: 1,
+            answers: ["Your diet", "Your mood", "Your schedule", "The barbell path"],
+            correctIndex: 3,
             explanation: "The smith machine locks the barbell into a fixed vertical path."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine targets the hamstrings?",
-            answers: ["Chest press", "Leg curl", "Shoulder press", "Cable crossover"],
-            correctIndex: 1,
+            answers: ["Chest press", "Shoulder press", "Leg curl", "Cable crossover"],
+            correctIndex: 2,
             explanation: "The leg curl machine isolates and strengthens the hamstrings."
         ),
         QuizQuestion(
             category: .machines,
             question: "What is the primary benefit of the cable machine?",
-            answers: ["Fixed movement pattern", "Constant tension throughout the movement", "Lighter weights only", "Cardio training"],
-            correctIndex: 1,
+            answers: ["Lighter weights only", "Cardio training", "Fixed movement pattern", "Constant tension throughout the movement"],
+            correctIndex: 3,
             explanation: "Cables provide constant tension on the muscles throughout the entire range of motion."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine is safest for beginners doing squats?",
-            answers: ["Free barbell", "Smith machine", "Hack squat", "Leg extension"],
+            answers: ["Leg extension", "Smith machine", "Free barbell", "Hack squat"],
             correctIndex: 1,
             explanation: "The smith machine provides a guided path and safety catches, making it ideal for beginners."
         ),
         QuizQuestion(
             category: .machines,
             question: "What does the pec deck machine primarily work?",
-            answers: ["Chest muscles", "Back muscles", "Leg muscles", "Core muscles"],
-            correctIndex: 0,
+            answers: ["Leg muscles", "Back muscles", "Chest muscles", "Core muscles"],
+            correctIndex: 2,
             explanation: "The pec deck isolates the pectoralis major and minor chest muscles."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine is best for training calves?",
-            answers: ["Leg press", "Calf raise machine", "Leg curl", "Hip abductor"],
-            correctIndex: 1,
+            answers: ["Hip abductor", "Leg press", "Calf raise machine", "Leg curl"],
+            correctIndex: 2,
             explanation: "The calf raise machine specifically targets the gastrocnemius and soleus muscles."
         ),
         QuizQuestion(
             category: .machines,
             question: "What is the main advantage of using machines over free weights?",
-            answers: ["They're always better", "Isolation and stability", "Less muscle activation", "Faster results"],
-            correctIndex: 1,
+            answers: ["They're always better", "Less muscle activation", "Faster results", "Isolation and stability"],
+            correctIndex: 3,
             explanation: "Machines provide stability and allow for better muscle isolation, especially for beginners."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine helps strengthen the rotator cuff?",
-            answers: ["Leg press", "Cable external rotation", "Bench press", "Lat pulldown"],
-            correctIndex: 1,
+            answers: ["Cable external rotation", "Bench press", "Lat pulldown", "Leg press"],
+            correctIndex: 0,
             explanation: "Cable external rotations are excellent for strengthening the rotator cuff muscles."
         ),
         QuizQuestion(
             category: .machines,
             question: "What does the seated row machine primarily target?",
-            answers: ["Chest", "Back and rear deltoids", "Legs", "Triceps"],
-            correctIndex: 1,
+            answers: ["Back and rear deltoids", "Legs", "Triceps", "Chest"],
+            correctIndex: 0,
             explanation: "Seated rows work the lats, rhomboids, traps, and rear deltoids."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine is best for hip abductor training?",
-            answers: ["Leg press", "Hip abduction machine", "Leg curl", "Smith machine"],
-            correctIndex: 1,
+            answers: ["Hip abduction machine", "Leg press", "Smith machine", "Leg curl"],
+            correctIndex: 0,
             explanation: "The hip abduction machine specifically targets the gluteus medius and minimus."
         ),
         QuizQuestion(
             category: .machines,
             question: "What is the benefit of the preacher curl machine?",
-            answers: ["Works legs", "Isolates biceps and prevents cheating", "Targets back", "Improves cardio"],
+            answers: ["Improves cardio", "Isolates biceps and prevents cheating", "Targets back", "Works legs"],
             correctIndex: 1,
             explanation: "The preacher curl bench prevents momentum and isolates the biceps for better development."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine provides the best quad isolation?",
-            answers: ["Leg curl", "Leg extension", "Calf raise", "Hip adduction"],
-            correctIndex: 1,
+            answers: ["Leg curl", "Hip adduction", "Calf raise", "Leg extension"],
+            correctIndex: 3,
             explanation: "The leg extension machine isolates the quadriceps without hamstring involvement."
         ),
         QuizQuestion(
             category: .machines,
             question: "What does the chest press machine simulate?",
-            answers: ["Pull-ups", "Bench press", "Squats", "Deadlifts"],
-            correctIndex: 1,
+            answers: ["Deadlifts", "Squats", "Pull-ups", "Bench press"],
+            correctIndex: 3,
             explanation: "The chest press machine mimics the bench press motion with added stability."
         ),
         QuizQuestion(
             category: .machines,
             question: "Which machine is ideal for building grip strength?",
-            answers: ["Leg press", "Cable machine with various grips", "Pec deck", "Leg extension"],
-            correctIndex: 1,
+            answers: ["Leg press", "Pec deck", "Cable machine with various grips", "Leg extension"],
+            correctIndex: 2,
             explanation: "Cable machines with different grip attachments are excellent for developing grip strength."
         ),
+        QuizQuestion(
+            category: .machines,
+            question: "What does the hack squat machine emphasize?",
+            answers: ["Quadriceps with reduced back strain", "Hamstrings only", "Upper back", "Chest"],
+            correctIndex: 0,
+            explanation: "The hack squat allows heavy quad training while minimizing lower back involvement."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "Which machine is best for training the rear deltoids?",
+            answers: ["Bicep curl", "Leg curl", "Chest press", "Reverse pec deck"],
+            correctIndex: 3,
+            explanation: "The reverse pec deck specifically targets the rear deltoids and upper back."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What is the primary benefit of the leg press over squats?",
+            answers: ["Faster results", "Removes lower back from the equation", "Burns more calories", "Works more muscles"],
+            correctIndex: 1,
+            explanation: "The leg press supports your back, allowing focus on legs without spinal loading."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "Which machine helps isolate the triceps?",
+            answers: ["Pec deck", "Cable tricep pushdown", "Lat pulldown", "Leg extension"],
+            correctIndex: 1,
+            explanation: "Cable pushdowns effectively isolate the triceps with constant tension."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What does the T-bar row machine primarily work?",
+            answers: ["Middle back and lats", "Legs", "Shoulders", "Chest"],
+            correctIndex: 0,
+            explanation: "The T-bar row is excellent for building back thickness, targeting lats and rhomboids."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "Which machine is safest for shoulder press beginners?",
+            answers: ["No equipment", "Free weights only", "Barbell only", "Machine shoulder press"],
+            correctIndex: 3,
+            explanation: "Machine shoulder presses provide a guided path and stability for safe overhead pressing."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What is the advantage of the assisted pull-up machine?",
+            answers: ["Makes you weaker", "Helps build strength until unassisted pull-ups are possible", "No advantages", "Only for children"],
+            correctIndex: 1,
+            explanation: "The assisted pull-up machine counterbalances your weight, helping you progress to unassisted pull-ups."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "Which machine works the hip adductors?",
+            answers: ["Cable crossover", "Hip adduction machine", "Leg press", "Lat pulldown"],
+            correctIndex: 1,
+            explanation: "The hip adduction machine specifically targets the inner thigh muscles."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What does the hyperextension bench primarily target?",
+            answers: ["Biceps", "Lower back and glutes", "Calves", "Chest"],
+            correctIndex: 1,
+            explanation: "Hyperextensions strengthen the erector spinae, glutes, and hamstrings."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "Which machine allows for unilateral training?",
+            answers: ["Single-arm cable machine", "Smith machine", "None", "Leg press"],
+            correctIndex: 0,
+            explanation: "Cable machines excel at single-arm movements, helping correct muscle imbalances."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What is the benefit of the seated leg curl over standing?",
+            answers: ["Works different muscles", "Burns more fat", "Better hamstring isolation and stability", "Easier"],
+            correctIndex: 2,
+            explanation: "Seated leg curls provide better isolation by stabilizing the body and targeting hamstrings."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "Which machine is best for training the lower chest?",
+            answers: ["Decline chest press machine", "Incline press", "Shoulder press", "Flat bench press"],
+            correctIndex: 0,
+            explanation: "Decline angles emphasize the lower portion of the pectoral muscles."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What does the incline bench press machine emphasize?",
+            answers: ["Lower chest", "Upper chest and front delts", "Legs", "Back"],
+            correctIndex: 1,
+            explanation: "Incline pressing shifts emphasis to the clavicular (upper) portion of the chest."
+        ),
+        QuizQuestion(
+            category: .machines,
+            question: "What is the benefit of using a leverage machine?",
+            answers: ["Provides natural movement path with plate-loaded resistance", "Only for beginners", "No benefits", "Cardio training"],
+            correctIndex: 0,
+            explanation: "Leverage machines offer a more natural feel than traditional stack machines while maintaining stability."
+        ),
         
-        // Trivia (16 questions)
+        // Trivia (30 questions)
         QuizQuestion(
             category: .trivia,
             question: "Who is known as 'The Austrian Oak'?",
-            answers: ["Ronnie Coleman", "Arnold Schwarzenegger", "Jay Cutler", "Dorian Yates"],
-            correctIndex: 1,
+            answers: ["Dorian Yates", "Ronnie Coleman", "Arnold Schwarzenegger", "Jay Cutler"],
+            correctIndex: 2,
             explanation: "Arnold Schwarzenegger earned this nickname during his bodybuilding career."
         ),
         QuizQuestion(
@@ -134,271 +232,467 @@ enum QuizData {
         QuizQuestion(
             category: .trivia,
             question: "Who holds the record for most Mr. Olympia wins?",
-            answers: ["Arnold Schwarzenegger", "Lee Haney", "Ronnie Coleman", "Both Lee Haney and Ronnie Coleman"],
-            correctIndex: 3,
+            answers: ["Both Lee Haney and Ronnie Coleman", "Ronnie Coleman", "Arnold Schwarzenegger", "Lee Haney"],
+            correctIndex: 0,
             explanation: "Both Lee Haney and Ronnie Coleman won 8 Mr. Olympia titles each."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What is a 'PR' in gym terminology?",
-            answers: ["Public Relations", "Personal Record", "Protein Ratio", "Push Routine"],
-            correctIndex: 1,
+            answers: ["Push Routine", "Public Relations", "Personal Record", "Protein Ratio"],
+            correctIndex: 2,
             explanation: "PR stands for Personal Record - your best performance on an exercise."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What does 'DOMS' stand for?",
-            answers: ["Delayed Onset Muscle Soreness", "Daily Optimal Muscle Strength", "Dynamic Overhead Movement System", "Direct Overload Muscle Stimulation"],
+            answers: ["Delayed Onset Muscle Soreness", "Daily Optimal Muscle Strength", "Direct Overload Muscle Stimulation", "Dynamic Overhead Movement System"],
             correctIndex: 0,
             explanation: "DOMS is the muscle pain that appears 24-48 hours after intense exercise."
         ),
         QuizQuestion(
             category: .trivia,
             question: "Who popularized the term 'No pain, no gain'?",
-            answers: ["Arnold Schwarzenegger", "Jane Fonda", "Jack LaLanne", "Joe Weider"],
-            correctIndex: 1,
+            answers: ["Joe Weider", "Jack LaLanne", "Jane Fonda", "Arnold Schwarzenegger"],
+            correctIndex: 2,
             explanation: "Jane Fonda popularized this phrase in the 1980s fitness movement."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What is the 'big 3' in powerlifting?",
-            answers: ["Curl, Press, Row", "Squat, Bench Press, Deadlift", "Run, Jump, Throw", "Pull-up, Push-up, Dip"],
-            correctIndex: 1,
+            answers: ["Squat, Bench Press, Deadlift", "Run, Jump, Throw", "Curl, Press, Row", "Pull-up, Push-up, Dip"],
+            correctIndex: 0,
             explanation: "The big 3 compound lifts are squat, bench press, and deadlift."
         ),
         QuizQuestion(
             category: .trivia,
             question: "Who invented the barbell?",
-            answers: ["Arnold Schwarzenegger", "Bob Hoffman", "Alan Calvert", "Joe Weider"],
-            correctIndex: 2,
+            answers: ["Joe Weider", "Alan Calvert", "Bob Hoffman", "Arnold Schwarzenegger"],
+            correctIndex: 1,
             explanation: "Alan Calvert invented the adjustable plate-loading barbell in 1902."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What does 'CrossFit' emphasize?",
-            answers: ["Bodybuilding only", "Varied functional movements at high intensity", "Yoga and meditation", "Long distance running"],
-            correctIndex: 1,
+            answers: ["Yoga and meditation", "Bodybuilding only", "Varied functional movements at high intensity", "Long distance running"],
+            correctIndex: 2,
             explanation: "CrossFit focuses on constantly varied functional movements performed at high intensity."
         ),
         QuizQuestion(
             category: .trivia,
             question: "Who is known as 'The Blade'?",
-            answers: ["Phil Heath", "Dexter Jackson", "Jay Cutler", "Flex Wheeler"],
-            correctIndex: 1,
+            answers: ["Jay Cutler", "Flex Wheeler", "Dexter Jackson", "Phil Heath"],
+            correctIndex: 2,
             explanation: "Dexter Jackson earned the nickname 'The Blade' for his razor-sharp conditioning."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What year was the first Mr. Olympia competition?",
-            answers: ["1955", "1965", "1970", "1975"],
-            correctIndex: 1,
+            answers: ["1965", "1970", "1955", "1975"],
+            correctIndex: 0,
             explanation: "The first Mr. Olympia competition was held in 1965 in New York."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What is a 'pump' in bodybuilding?",
-            answers: ["A type of protein shake", "Temporary muscle swelling from blood flow", "A cardio machine", "A stretching technique"],
-            correctIndex: 1,
+            answers: ["Temporary muscle swelling from blood flow", "A type of protein shake", "A stretching technique", "A cardio machine"],
+            correctIndex: 0,
             explanation: "The pump is temporary muscle swelling caused by increased blood flow during exercise."
         ),
         QuizQuestion(
             category: .trivia,
             question: "Who created the 'Bulgarian Split Squat'?",
-            answers: ["Bulgarian weightlifting coach", "Arnold Schwarzenegger", "CrossFit founder", "Powerlifting champion"],
-            correctIndex: 0,
+            answers: ["Arnold Schwarzenegger", "Powerlifting champion", "Bulgarian weightlifting coach", "CrossFit founder"],
+            correctIndex: 2,
             explanation: "This exercise was developed by Bulgarian weightlifting coaches for leg development."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What does 'reps' stand for?",
-            answers: ["Representatives", "Repetitions", "Reports", "Repairs"],
-            correctIndex: 1,
+            answers: ["Repairs", "Representatives", "Reports", "Repetitions"],
+            correctIndex: 3,
             explanation: "Reps is short for repetitions - the number of times you perform an exercise."
         ),
         QuizQuestion(
             category: .trivia,
             question: "What is 'German Volume Training'?",
-            answers: ["5 sets of 5 reps", "10 sets of 10 reps", "3 sets of 8 reps", "20 sets of 1 rep"],
-            correctIndex: 1,
+            answers: ["3 sets of 8 reps", "5 sets of 5 reps", "20 sets of 1 rep", "10 sets of 10 reps"],
+            correctIndex: 3,
             explanation: "GVT is a high-volume protocol using 10 sets of 10 reps to promote muscle growth."
         ),
         QuizQuestion(
             category: .trivia,
             question: "Who was the first woman to win Ms. Olympia?",
-            answers: ["Rachel McLish", "Cory Everson", "Lenda Murray", "Iris Kyle"],
-            correctIndex: 0,
+            answers: ["Lenda Murray", "Cory Everson", "Rachel McLish", "Iris Kyle"],
+            correctIndex: 2,
             explanation: "Rachel McLish won the inaugural Ms. Olympia competition in 1980."
         ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What is a 'bro split'?",
+            answers: ["Splitting the check at the gym cafe", "Training one muscle group per day", "A type of protein shake", "A stretching routine"],
+            correctIndex: 1,
+            explanation: "A bro split dedicates each workout day to a single muscle group like chest, back, or legs."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "Who is known as 'The Gift'?",
+            answers: ["Arnold Schwarzenegger", "Ronnie Coleman", "Jay Cutler", "Phil Heath"],
+            correctIndex: 3,
+            explanation: "Phil Heath earned this nickname for his gifted genetics and 7 Mr. Olympia titles."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What does 'natty' mean in bodybuilding?",
+            answers: ["Natural, without performance-enhancing drugs", "Diet plan", "Training style", "A type of supplement"],
+            correctIndex: 0,
+            explanation: "Natty is short for natural, referring to someone who doesn't use steroids or PEDs."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "Who popularized the phrase 'Lightweight baby!'?",
+            answers: ["Dorian Yates", "Ronnie Coleman", "Jay Cutler", "Arnold Schwarzenegger"],
+            correctIndex: 1,
+            explanation: "Ronnie Coleman's iconic catchphrase became legendary in bodybuilding culture."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What is a 'spotter' in weightlifting?",
+            answers: ["A type of exercise", "A trainer", "A person who assists during heavy lifts", "Someone who cleans equipment"],
+            correctIndex: 2,
+            explanation: "A spotter helps ensure safety during heavy lifts and can assist if you struggle."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What year did CrossFit officially begin?",
+            answers: ["2005", "1995", "2000", "1990"],
+            correctIndex: 2,
+            explanation: "Greg Glassman officially founded CrossFit Inc. in 2000."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "Who holds the world record for heaviest deadlift?",
+            answers: ["Eddie Hall", "Hafthor Bjornsson", "Zydrunas Savickas", "Brian Shaw"],
+            correctIndex: 1,
+            explanation: "Hafthor Bjornsson deadlifted 501 kg (1,104.5 lbs) in 2020, breaking Eddie Hall's record."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What is 'cutting' in bodybuilding?",
+            answers: ["A type of supplement", "Quitting the gym", "Reducing body fat while preserving muscle", "Stopping training"],
+            correctIndex: 2,
+            explanation: "Cutting is a fat loss phase to reveal muscle definition, typically through caloric deficit."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What does 'bulking' mean?",
+            answers: ["Losing weight", "Getting fat", "Eating in a surplus to gain muscle mass", "A type of workout"],
+            correctIndex: 2,
+            explanation: "Bulking involves eating more calories to support maximum muscle growth."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "Who created the concept of 'muscle confusion'?",
+            answers: ["Jack LaLanne", "Arnold Schwarzenegger", "P90X/Tony Horton", "Joe Weider"],
+            correctIndex: 2,
+            explanation: "Tony Horton popularized muscle confusion through the P90X program."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What is the 'Weider Principles'?",
+            answers: ["Supplement line", "Gym chain", "Training methods and techniques", "Diet plan"],
+            correctIndex: 2,
+            explanation: "Joe Weider developed numerous training principles that shaped modern bodybuilding."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What is a 'gym bro'?",
+            answers: ["Someone overly focused on gym culture/aesthetics", "Your training partner", "A trainer", "Equipment manager"],
+            correctIndex: 0,
+            explanation: "A gym bro is a stereotypical enthusiastic weightlifter focused on gains and gym lifestyle."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "Who is considered the father of modern bodybuilding?",
+            answers: ["Charles Atlas", "Arnold Schwarzenegger", "Jack LaLanne", "Eugen Sandow"],
+            correctIndex: 3,
+            explanation: "Eugen Sandow pioneered bodybuilding as a sport in the late 1800s and early 1900s."
+        ),
+        QuizQuestion(
+            category: .trivia,
+            question: "What is 'Smolov' in powerlifting?",
+            answers: ["A stretching routine", "An intense squat program", "A protein brand", "A gym location"],
+            correctIndex: 1,
+            explanation: "Smolov is a brutal Russian squat program designed for rapid strength gains."
+        ),
         
-        // Fun Facts (16 questions)
+        // Fun Facts (30 questions)
         QuizQuestion(
             category: .funFacts,
             question: "What happens to your muscles after an intense workout?",
-            answers: ["They shrink", "They get tiny tears", "They turn blue", "They multiply"],
-            correctIndex: 1,
+            answers: ["They multiply", "They turn blue", "They shrink", "They get tiny tears"],
+            correctIndex: 3,
             explanation: "Muscle growth happens when tiny tears repair and grow back stronger!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "Which is the largest muscle in your body?",
-            answers: ["Bicep", "Gluteus maximus", "Heart", "Quadriceps"],
-            correctIndex: 1,
+            answers: ["Gluteus maximus", "Quadriceps", "Heart", "Bicep"],
+            correctIndex: 0,
             explanation: "Your glutes are the largest muscles in the human body!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "How many muscles does it take to smile?",
-            answers: ["5", "12", "26", "43"],
-            correctIndex: 2,
+            answers: ["43", "26", "5", "12"],
+            correctIndex: 1,
             explanation: "It takes about 26 muscles to smile - a great face workout!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "What's the strongest muscle relative to its size?",
-            answers: ["Bicep", "Masseter (jaw)", "Calf", "Heart"],
-            correctIndex: 1,
+            answers: ["Heart", "Bicep", "Masseter (jaw)", "Calf"],
+            correctIndex: 2,
             explanation: "Your jaw muscle can close teeth with a force of 200 pounds!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "How many muscles are in the human body?",
-            answers: ["206", "350", "Over 600", "1000"],
-            correctIndex: 2,
+            answers: ["350", "Over 600", "206", "1000"],
+            correctIndex: 1,
             explanation: "The human body has over 600 muscles working together!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "What percentage of your body weight is muscle?",
-            answers: ["10-20%", "30-40%", "50-60%", "70-80%"],
-            correctIndex: 1,
+            answers: ["10-20%", "70-80%", "30-40%", "50-60%"],
+            correctIndex: 2,
             explanation: "Muscle typically makes up 30-40% of total body weight in healthy adults."
         ),
         QuizQuestion(
             category: .funFacts,
             question: "Which muscle never gets tired?",
-            answers: ["Bicep", "Heart", "Calf", "Abs"],
-            correctIndex: 1,
+            answers: ["Abs", "Bicep", "Heart", "Calf"],
+            correctIndex: 2,
             explanation: "The heart beats continuously without resting, pumping blood 24/7!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "How fast can muscle fibers contract?",
-            answers: ["0.01 seconds", "0.5 seconds", "2 seconds", "5 seconds"],
-            correctIndex: 0,
+            answers: ["2 seconds", "0.5 seconds", "5 seconds", "0.01 seconds"],
+            correctIndex: 3,
             explanation: "Some muscle fibers can contract in as little as 0.01 seconds!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "What's the smallest muscle in your body?",
-            answers: ["Eye muscle", "Stapedius in the ear", "Finger muscle", "Toe muscle"],
-            correctIndex: 1,
+            answers: ["Finger muscle", "Eye muscle", "Toe muscle", "Stapedius in the ear"],
+            correctIndex: 3,
             explanation: "The stapedius in your middle ear is the smallest muscle, controlling sound vibrations."
         ),
         QuizQuestion(
             category: .funFacts,
             question: "How much force can the quadriceps generate?",
-            answers: ["50 pounds", "100 pounds", "300 pounds", "600+ pounds"],
-            correctIndex: 3,
+            answers: ["300 pounds", "600+ pounds", "50 pounds", "100 pounds"],
+            correctIndex: 1,
             explanation: "The quadriceps can generate over 600 pounds of force when fully contracted!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "What happens to unused muscles?",
-            answers: ["They disappear", "They atrophy (shrink)", "They turn to fat", "Nothing"],
+            answers: ["They turn to fat", "They atrophy (shrink)", "They disappear", "Nothing"],
             correctIndex: 1,
             explanation: "Unused muscles undergo atrophy - 'use it or lose it' is scientifically accurate!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "How long does it take to build noticeable muscle?",
-            answers: ["1 week", "2-3 weeks", "6-8 weeks", "1 year"],
-            correctIndex: 2,
+            answers: ["6-8 weeks", "1 week", "1 year", "2-3 weeks"],
+            correctIndex: 0,
             explanation: "Most people see noticeable muscle growth after 6-8 weeks of consistent training."
         ),
         QuizQuestion(
             category: .funFacts,
             question: "What percentage of daily calories do muscles burn?",
-            answers: ["5-10%", "20-30%", "50-60%", "80-90%"],
-            correctIndex: 1,
+            answers: ["20-30%", "50-60%", "5-10%", "80-90%"],
+            correctIndex: 0,
             explanation: "Muscles account for about 20-30% of your resting metabolic rate!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "Can muscles turn into fat?",
-            answers: ["Yes, if you stop working out", "No, they're different tissues", "Only if you eat poorly", "Yes, but only slowly"],
-            correctIndex: 1,
+            answers: ["No, they're different tissues", "Only if you eat poorly", "Yes, but only slowly", "Yes, if you stop working out"],
+            correctIndex: 0,
             explanation: "Muscle and fat are completely different tissues - one cannot transform into the other!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "What color are muscle fibers?",
-            answers: ["Red or white", "Blue", "Green", "Clear"],
+            answers: ["Red or white", "Green", "Blue", "Clear"],
             correctIndex: 0,
             explanation: "Muscles have red (slow-twitch) and white (fast-twitch) fibers based on their function!"
         ),
         QuizQuestion(
             category: .funFacts,
             question: "How much blood can working muscles demand?",
-            answers: ["10% of cardiac output", "25% of cardiac output", "50% of cardiac output", "80% of cardiac output"],
-            correctIndex: 3,
+            answers: ["10% of cardiac output", "80% of cardiac output", "25% of cardiac output", "50% of cardiac output"],
+            correctIndex: 1,
             explanation: "During intense exercise, working muscles can demand up to 80% of your heart's blood output!"
         ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "How many times does your heart beat per day?",
+            answers: ["200,000", "100,000", "500,000", "50,000"],
+            correctIndex: 1,
+            explanation: "Your heart beats about 100,000 times daily, pumping 2,000 gallons of blood!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "What percentage of your body's muscles are in your legs?",
+            answers: ["50%", "25%", "75%", "40%"],
+            correctIndex: 0,
+            explanation: "About half of your body's muscle mass is located in your legs!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "How much can muscle increase your metabolism?",
+            answers: ["500 cal/day per pound", "Up to 50 cal/day per pound", "Not at all", "100 cal/day per pound"],
+            correctIndex: 1,
+            explanation: "Each pound of muscle can burn 30-50 extra calories per day at rest!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "Can you build muscle after age 50?",
+            answers: ["Yes, with proper training and nutrition", "Only if you trained before", "Only with steroids", "No, impossible"],
+            correctIndex: 0,
+            explanation: "You can build muscle at any age! Resistance training benefits people well into their 80s and 90s."
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "What's the fastest muscle in the human body?",
+            answers: ["Leg muscle", "Jaw muscle", "Eye muscle", "Heart"],
+            correctIndex: 2,
+            explanation: "Eye muscles can contract in less than 1/100th of a second!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "How long can muscles 'remember' training?",
+            answers: ["1 month", "1 week", "Several years", "Forever"],
+            correctIndex: 2,
+            explanation: "Muscle memory can last years! Previously trained muscles regrow faster after a break."
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "What percentage stronger are males typically than females?",
+            answers: ["80%", "200%", "30-40%", "10%"],
+            correctIndex: 2,
+            explanation: "On average, males have 30-40% more upper body strength, though this varies individually."
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "How many muscles does it take to frown?",
+            answers: ["11", "43", "62", "5"],
+            correctIndex: 1,
+            explanation: "Frowning uses about 43 muscles - so smile more, it's easier!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "What's the longest muscle in your body?",
+            answers: ["Hamstring", "Back muscle", "Sartorius", "Quadriceps"],
+            correctIndex: 2,
+            explanation: "The sartorius runs from hip to knee and is the longest muscle in your body!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "Can muscles grow while you sleep?",
+            answers: ["Only in children", "No, only when awake", "Yes, growth hormone peaks during sleep", "Only during naps"],
+            correctIndex: 2,
+            explanation: "Deep sleep triggers growth hormone release, crucial for muscle repair and growth!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "How much water is in muscle tissue?",
+            answers: ["20%", "50%", "95%", "75%"],
+            correctIndex: 3,
+            explanation: "Muscle tissue is about 75% water, which is why hydration is crucial for performance!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "Do muscles work in pairs?",
+            answers: ["No, independently", "Only during cardio", "Only arm muscles", "Yes, agonist and antagonist pairs"],
+            correctIndex: 3,
+            explanation: "Muscles work in opposing pairs - when one contracts, its partner relaxes!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "What's the hardest working muscle in your body?",
+            answers: ["Heart", "Abs", "Bicep", "Calf"],
+            correctIndex: 0,
+            explanation: "Your heart never rests, pumping blood every second of your life!"
+        ),
+        QuizQuestion(
+            category: .funFacts,
+            question: "How many bones do muscles attach to?",
+            answers: ["100", "Over 300 attachment points", "206", "50"],
+            correctIndex: 1,
+            explanation: "Muscles connect to bones at over 300 points throughout the body via tendons!"
+        ),
         
-        // Science (16 questions)
+        // Science (30 questions)
         QuizQuestion(
             category: .science,
             question: "How much protein should you eat per kg of body weight daily?",
-            answers: ["0.5-0.8g", "1.6-2.2g", "3-4g", "5g+"],
-            correctIndex: 1,
+            answers: ["1.6-2.2g", "3-4g", "0.5-0.8g", "5g+"],
+            correctIndex: 0,
             explanation: "Research suggests 1.6-2.2g per kg of body weight for muscle building."
         ),
         QuizQuestion(
             category: .science,
             question: "How long is the 'anabolic window' after a workout?",
-            answers: ["15 minutes", "It's actually several hours", "Exactly 30 minutes", "24 hours"],
-            correctIndex: 1,
+            answers: ["24 hours", "15 minutes", "It's actually several hours", "Exactly 30 minutes"],
+            correctIndex: 2,
             explanation: "Recent research shows the anabolic window is much longer than previously thought!"
         ),
         QuizQuestion(
             category: .science,
             question: "How long should you rest between sets for muscle growth?",
-            answers: ["10 seconds", "30-90 seconds", "5 minutes", "No rest needed"],
-            correctIndex: 1,
+            answers: ["5 minutes", "No rest needed", "30-90 seconds", "10 seconds"],
+            correctIndex: 2,
             explanation: "30-90 seconds is optimal for hypertrophy training."
         ),
         QuizQuestion(
             category: .science,
             question: "What does 'progressive overload' mean?",
-            answers: ["Eating more each week", "Gradually increasing training demands", "Overtraining", "Loading the bar unevenly"],
-            correctIndex: 1,
+            answers: ["Gradually increasing training demands", "Overtraining", "Loading the bar unevenly", "Eating more each week"],
+            correctIndex: 0,
             explanation: "Progressive overload means gradually increasing weight, reps, or intensity over time."
         ),
         QuizQuestion(
             category: .science,
             question: "What is hypertrophy?",
-            answers: ["Muscle shrinkage", "Muscle growth", "Fat loss", "Bone density increase"],
+            answers: ["Bone density increase", "Muscle growth", "Muscle shrinkage", "Fat loss"],
             correctIndex: 1,
             explanation: "Hypertrophy is the scientific term for muscle growth and enlargement."
         ),
         QuizQuestion(
             category: .science,
             question: "What rep range is best for hypertrophy?",
-            answers: ["1-5 reps", "6-12 reps", "15-20 reps", "30+ reps"],
-            correctIndex: 1,
+            answers: ["1-5 reps", "30+ reps", "15-20 reps", "6-12 reps"],
+            correctIndex: 3,
             explanation: "6-12 reps is the traditional hypertrophy range, though recent research shows broader ranges work."
         ),
         QuizQuestion(
             category: .science,
             question: "What is muscle protein synthesis?",
-            answers: ["Breaking down muscle", "Building new muscle proteins", "Storing fat", "Burning calories"],
-            correctIndex: 1,
+            answers: ["Building new muscle proteins", "Breaking down muscle", "Storing fat", "Burning calories"],
+            correctIndex: 0,
             explanation: "MPS is the process of building new muscle proteins after training and feeding."
         ),
         QuizQuestion(
             category: .science,
             question: "How many hours of sleep are optimal for recovery?",
-            answers: ["4-5 hours", "6 hours", "7-9 hours", "12+ hours"],
-            correctIndex: 2,
+            answers: ["7-9 hours", "12+ hours", "4-5 hours", "6 hours"],
+            correctIndex: 0,
             explanation: "7-9 hours of quality sleep is optimal for muscle recovery and growth."
         ),
         QuizQuestion(
@@ -411,59 +705,157 @@ enum QuizData {
         QuizQuestion(
             category: .science,
             question: "What is 'time under tension'?",
-            answers: ["Total workout time", "Time muscles are working during a set", "Rest period", "Warm-up duration"],
+            answers: ["Rest period", "Time muscles are working during a set", "Warm-up duration", "Total workout time"],
             correctIndex: 1,
             explanation: "TUT is the total time a muscle is under strain during a set, important for growth."
         ),
         QuizQuestion(
             category: .science,
             question: "What causes muscle soreness after training?",
-            answers: ["Lactic acid buildup", "Microscopic muscle damage", "Dehydration only", "Low protein"],
-            correctIndex: 1,
+            answers: ["Microscopic muscle damage", "Lactic acid buildup", "Low protein", "Dehydration only"],
+            correctIndex: 0,
             explanation: "DOMS is caused by microscopic damage to muscle fibers and subsequent inflammation."
         ),
         QuizQuestion(
             category: .science,
             question: "What is the role of testosterone in muscle building?",
-            answers: ["No role", "Promotes protein synthesis and muscle growth", "Only burns fat", "Decreases muscle"],
-            correctIndex: 1,
+            answers: ["Decreases muscle", "No role", "Promotes protein synthesis and muscle growth", "Only burns fat"],
+            correctIndex: 2,
             explanation: "Testosterone is anabolic, promoting protein synthesis and muscle development."
         ),
         QuizQuestion(
             category: .science,
             question: "How many calories does 1 pound of muscle burn per day?",
-            answers: ["1-2 calories", "6-10 calories", "50 calories", "100 calories"],
+            answers: ["100 calories", "6-10 calories", "1-2 calories", "50 calories"],
             correctIndex: 1,
             explanation: "One pound of muscle burns approximately 6-10 calories per day at rest."
         ),
         QuizQuestion(
             category: .science,
             question: "What is eccentric training?",
-            answers: ["Fast lifting", "The lowering phase of an exercise", "Cardio only", "Stretching"],
-            correctIndex: 1,
+            answers: ["Cardio only", "Stretching", "The lowering phase of an exercise", "Fast lifting"],
+            correctIndex: 2,
             explanation: "Eccentric training emphasizes the lowering phase, causing more muscle damage and growth."
         ),
         QuizQuestion(
             category: .science,
             question: "What is muscle glycogen?",
-            answers: ["A protein", "Stored carbohydrate in muscles", "A vitamin", "A hormone"],
-            correctIndex: 1,
+            answers: ["Stored carbohydrate in muscles", "A vitamin", "A hormone", "A protein"],
+            correctIndex: 0,
             explanation: "Glycogen is the stored form of carbohydrates in muscles, used for energy during exercise."
         ),
         QuizQuestion(
             category: .science,
             question: "What is the 'pump' scientifically?",
-            answers: ["Permanent muscle growth", "Cellular swelling from blood and fluid", "Fat loss", "Nerve activation"],
+            answers: ["Nerve activation", "Cellular swelling from blood and fluid", "Permanent muscle growth", "Fat loss"],
             correctIndex: 1,
             explanation: "The pump is temporary cellular swelling caused by increased blood flow and fluid to muscles."
         ),
+        QuizQuestion(
+            category: .science,
+            question: "What is the role of cortisol in training?",
+            answers: ["Builds muscle", "Catabolic hormone that can break down muscle", "Only helps recovery", "No effect"],
+            correctIndex: 1,
+            explanation: "Cortisol is a stress hormone that can inhibit muscle growth when chronically elevated."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is satellite cell activation?",
+            answers: ["Space research", "Brain activity", "Heart function", "Process that helps muscles grow new fibers"],
+            correctIndex: 3,
+            explanation: "Satellite cells fuse to muscle fibers after training, enabling muscle growth and repair."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "How long does muscle protein synthesis stay elevated after training?",
+            answers: ["24-48 hours", "1 week", "4-6 hours", "1 hour"],
+            correctIndex: 0,
+            explanation: "Protein synthesis remains elevated for 24-48 hours post-workout, supporting muscle recovery."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is mechanical tension in muscle growth?",
+            answers: ["Equipment malfunction", "Stretching", "Mental stress", "Physical force on muscle fibers during contraction"],
+            correctIndex: 3,
+            explanation: "Mechanical tension from lifting weights is a primary driver of muscle hypertrophy."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is metabolic stress?",
+            answers: ["Financial worry", "Eating disorders", "Buildup of metabolites like lactate during training", "Sleep problems"],
+            correctIndex: 2,
+            explanation: "Metabolic stress from high-rep training creates a growth-promoting environment in muscles."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is the stretch-shortening cycle?",
+            answers: ["Rapid eccentric-to-concentric muscle action", "Flexibility program", "Warm-up method", "Stretching routine"],
+            correctIndex: 0,
+            explanation: "The SSC stores elastic energy during stretching to enhance the following contraction."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is the rate of force development?",
+            answers: ["Calorie burn rate", "How quickly muscles generate maximum force", "Interest rates", "Heart rate increase"],
+            correctIndex: 1,
+            explanation: "RFD measures explosive strength - important for power athletes and functional fitness."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What are myofibrils?",
+            answers: ["Vitamins", "Energy molecules", "Contractile units within muscle fibers", "Protein supplements"],
+            correctIndex: 2,
+            explanation: "Myofibrils contain actin and myosin filaments that slide to create muscle contraction."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is the difference between Type I and Type II muscle fibers?",
+            answers: ["Type I are slow-twitch/endurance, Type II are fast-twitch/power", "Type I are stronger", "Color only", "No difference"],
+            correctIndex: 0,
+            explanation: "Type I fibers resist fatigue for endurance, Type II generate high force but fatigue quickly."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is the lactate threshold?",
+            answers: ["Exercise intensity where lactate accumulates faster than removal", "Milk allergy", "Protein limit", "Recovery point"],
+            correctIndex: 0,
+            explanation: "At lactate threshold, your body can't clear lactate as fast as it's produced, limiting performance."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is sarcoplasmic hypertrophy?",
+            answers: ["Bone growth", "Fat gain", "Increase in muscle fluid and energy stores", "Nerve growth"],
+            correctIndex: 2,
+            explanation: "Sarcoplasmic hypertrophy increases muscle size through fluid and glycogen storage increases."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is myofibrillar hypertrophy?",
+            answers: ["Increase in actual contractile proteins", "Water retention", "Fat storage", "Bone density"],
+            correctIndex: 0,
+            explanation: "Myofibrillar hypertrophy increases muscle strength and size through more contractile proteins."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is the repeated bout effect?",
+            answers: ["Doing same workout forever", "Detraining", "Overtraining", "Adaptation that reduces muscle damage from subsequent workouts"],
+            correctIndex: 3,
+            explanation: "After initial exposure, muscles adapt to specific exercises, reducing soreness in future sessions."
+        ),
+        QuizQuestion(
+            category: .science,
+            question: "What is muscle fiber recruitment?",
+            answers: ["Stretching method", "Progressive activation of motor units during exercise", "Recovery process", "Hiring trainers"],
+            correctIndex: 1,
+            explanation: "As effort increases, your nervous system recruits more muscle fibers to meet the demand."
+        ),
         
-        // Nutrition (12 questions)
+        // Nutrition (30 questions)
         QuizQuestion(
             category: .nutrition,
             question: "What is the primary macronutrient for muscle building?",
-            answers: ["Carbohydrates", "Protein", "Fats", "Vitamins"],
-            correctIndex: 1,
+            answers: ["Vitamins", "Carbohydrates", "Protein", "Fats"],
+            correctIndex: 2,
             explanation: "Protein provides amino acids essential for muscle repair and growth."
         ),
         QuizQuestion(
@@ -476,165 +868,410 @@ enum QuizData {
         QuizQuestion(
             category: .nutrition,
             question: "What are BCAAs?",
-            answers: ["B Vitamins", "Branched-Chain Amino Acids", "Bacterial Cultures", "Basic Carb Absorption Agents"],
-            correctIndex: 1,
+            answers: ["Basic Carb Absorption Agents", "B Vitamins", "Bacterial Cultures", "Branched-Chain Amino Acids"],
+            correctIndex: 3,
             explanation: "BCAAs are leucine, isoleucine, and valine - essential amino acids for muscle building."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "When is the best time to consume carbs for training?",
-            answers: ["Never", "Before and after workouts", "Only at breakfast", "Only at night"],
-            correctIndex: 1,
+            answers: ["Only at breakfast", "Only at night", "Never", "Before and after workouts"],
+            correctIndex: 3,
             explanation: "Carbs before workouts provide energy, and after workouts help with recovery."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "What percentage of calories should come from protein for muscle gain?",
-            answers: ["5-10%", "15-30%", "50-60%", "80-90%"],
-            correctIndex: 1,
+            answers: ["5-10%", "80-90%", "15-30%", "50-60%"],
+            correctIndex: 2,
             explanation: "15-30% of daily calories from protein is optimal for most people building muscle."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "Are all protein sources equal?",
-            answers: ["Yes", "No - complete proteins have all essential amino acids", "Only plant proteins are good", "Only animal proteins work"],
-            correctIndex: 1,
+            answers: ["No - complete proteins have all essential amino acids", "Only animal proteins work", "Yes", "Only plant proteins are good"],
+            correctIndex: 0,
             explanation: "Complete proteins contain all 9 essential amino acids needed for muscle growth."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "What is leucine's role in muscle building?",
-            answers: ["No specific role", "Triggers muscle protein synthesis", "Provides energy only", "Stores as fat"],
-            correctIndex: 1,
+            answers: ["Stores as fat", "Provides energy only", "No specific role", "Triggers muscle protein synthesis"],
+            correctIndex: 3,
             explanation: "Leucine is the key amino acid that signals the body to build muscle protein."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "Should you eat before morning workouts?",
-            answers: ["Never", "It depends on your goals and preference", "Always", "Only protein"],
-            correctIndex: 1,
+            answers: ["Only protein", "Never", "Always", "It depends on your goals and preference"],
+            correctIndex: 3,
             explanation: "Some people perform better fasted, others need fuel - both approaches can work."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "What is a caloric surplus?",
-            answers: ["Eating less than you burn", "Eating more than you burn", "Eating exactly what you burn", "Not eating carbs"],
-            correctIndex: 1,
+            answers: ["Not eating carbs", "Eating less than you burn", "Eating exactly what you burn", "Eating more than you burn"],
+            correctIndex: 3,
             explanation: "A caloric surplus provides extra energy needed for muscle growth."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "Why are healthy fats important for lifters?",
-            answers: ["They're not", "Hormone production and vitamin absorption", "Only for cardio", "To gain fat"],
+            answers: ["To gain fat", "Hormone production and vitamin absorption", "Only for cardio", "They're not"],
             correctIndex: 1,
             explanation: "Fats are essential for testosterone production and absorbing vitamins A, D, E, and K."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "What is the glycemic index?",
-            answers: ["Protein quality scale", "How quickly carbs raise blood sugar", "Fat content measure", "Vitamin levels"],
-            correctIndex: 1,
+            answers: ["Protein quality scale", "Fat content measure", "Vitamin levels", "How quickly carbs raise blood sugar"],
+            correctIndex: 3,
             explanation: "The glycemic index measures how quickly foods raise blood glucose levels."
         ),
         QuizQuestion(
             category: .nutrition,
             question: "Is meal timing critical for muscle growth?",
-            answers: ["Yes, you must eat every 2 hours", "Total daily intake matters more than timing", "Only breakfast matters", "Never eat after 6pm"],
-            correctIndex: 1,
+            answers: ["Yes, you must eat every 2 hours", "Never eat after 6pm", "Total daily intake matters more than timing", "Only breakfast matters"],
+            correctIndex: 2,
             explanation: "While timing can help, total daily protein and calories matter most for muscle growth."
         ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is the thermic effect of food?",
+            answers: ["Cooking temperature", "Hot food burns more calories", "Spicy food metabolism", "Energy required to digest and process nutrients"],
+            correctIndex: 3,
+            explanation: "TEF is highest for protein (20-30%), moderate for carbs (5-10%), lowest for fat (0-3%)."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "Are carbs essential for building muscle?",
+            answers: ["Only for cardio", "Absolutely required", "Carbs prevent muscle growth", "Not essential but very helpful for performance"],
+            correctIndex: 3,
+            explanation: "While not essential like protein, carbs fuel intense training and aid recovery."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is the protein digestibility score?",
+            answers: ["Protein powder brand", "Protein taste rating", "Measure of amino acid absorption efficiency", "Cooking method"],
+            correctIndex: 2,
+            explanation: "PDCAAS rates how well proteins are digested and absorbed - whey and eggs score highest."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "Should you eat carbs before bed?",
+            answers: ["Always required", "It doesn't negatively impact fat loss or muscle gain", "Never", "Only simple carbs"],
+            correctIndex: 1,
+            explanation: "Research shows eating carbs before bed doesn't harm body composition - total intake matters more."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is nutrient timing?",
+            answers: ["Clock watching", "Meal schedule", "Supplement timing", "Strategic eating around training for optimal results"],
+            correctIndex: 3,
+            explanation: "Nutrient timing optimizes when you eat specific nutrients relative to your workouts."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "How much protein can you absorb per meal?",
+            answers: ["20-30g only", "100g", "Unlimited", "Much more than previously thought, 40-60g+"],
+            correctIndex: 3,
+            explanation: "Your body can utilize more protein per meal than the old '30g limit' myth suggested."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What are essential amino acids?",
+            answers: ["All amino acids", "Optional nutrients", "9 amino acids your body can't produce", "Supplements only"],
+            correctIndex: 2,
+            explanation: "Essential amino acids must come from food - your body cannot synthesize them."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "Is casein protein better before bed?",
+            answers: ["Yes, it's essential", "No protein before bed", "Only for professionals", "It digests slowly but any protein works"],
+            correctIndex: 3,
+            explanation: "Casein's slow digestion may help overnight recovery, but total daily protein is more important."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is the role of omega-3 fatty acids?",
+            answers: ["Reduce inflammation and support recovery", "Only for cardio", "Cause weight gain", "No benefits"],
+            correctIndex: 0,
+            explanation: "Omega-3s reduce inflammation, support joint health, and may enhance muscle protein synthesis."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "Should you drink protein shakes?",
+            answers: ["They cause kidney damage", "Only for bodybuilders", "Absolutely required", "Convenient but whole food protein works equally well"],
+            correctIndex: 3,
+            explanation: "Protein shakes are convenient but offer no advantage over whole food protein sources."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is the role of sodium in training?",
+            answers: ["Only causes bloating", "Important for hydration and muscle contraction", "Always avoid it", "Irrelevant"],
+            correctIndex: 1,
+            explanation: "Sodium regulates fluid balance and nerve signals - athletes need adequate intake."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "How important is fiber for lifters?",
+            answers: ["Important for digestion, satiety, and health", "Only for weight loss", "Not important", "Prevents muscle growth"],
+            correctIndex: 0,
+            explanation: "Fiber aids digestion, helps control appetite, and supports overall health and recovery."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is refeeding?",
+            answers: ["Post-workout meal", "Overfeeding", "Strategic high-carb day during a diet", "Eating again after fasting"],
+            correctIndex: 2,
+            explanation: "Refeeds temporarily increase calories (mainly carbs) to boost hormones and performance during cuts."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "Are artificial sweeteners harmful?",
+            answers: ["Cause cancer always", "Generally safe in moderation per research", "Extremely toxic", "Build muscle"],
+            correctIndex: 1,
+            explanation: "Current research shows FDA-approved sweeteners are safe at typical consumption levels."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is the best post-workout meal ratio?",
+            answers: ["All protein", "3:1 or 4:1 carbs to protein", "All carbs", "Fat only"],
+            correctIndex: 1,
+            explanation: "A 3:1 or 4:1 carb-to-protein ratio optimizes glycogen replenishment and recovery."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "Should you take vitamins while training?",
+            answers: ["Always required", "Can help fill nutritional gaps if diet is inadequate", "They prevent gains", "Never needed"],
+            correctIndex: 1,
+            explanation: "Whole foods are best, but vitamins can help if your diet lacks certain nutrients."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "What is leucine threshold?",
+            answers: ["Maximum leucine intake", "Leucine toxicity", "Supplement brand", "Minimum leucine needed to trigger muscle protein synthesis (~2-3g)"],
+            correctIndex: 3,
+            explanation: "About 2-3g of leucine per meal maximally stimulates muscle protein synthesis."
+        ),
+        QuizQuestion(
+            category: .nutrition,
+            question: "How many calories are in 1 gram of fat?",
+            answers: ["7 calories", "9 calories", "12 calories", "4 calories"],
+            correctIndex: 1,
+            explanation: "Fat is the most calorie-dense macronutrient at 9 calories per gram."
+        ),
         
-        // Technique (12 questions)
+        // Technique (30 questions)
         QuizQuestion(
             category: .technique,
             question: "What is the most important factor in preventing injury?",
-            answers: ["Lifting heavy", "Proper form and technique", "Speed of lifting", "Training every day"],
-            correctIndex: 1,
+            answers: ["Lifting heavy", "Speed of lifting", "Training every day", "Proper form and technique"],
+            correctIndex: 3,
             explanation: "Proper form reduces injury risk and ensures you're targeting the right muscles."
         ),
         QuizQuestion(
             category: .technique,
             question: "Should you lock out your joints during exercises?",
-            answers: ["Always fully lock", "It depends on the exercise", "Never lock out", "Only on leg exercises"],
-            correctIndex: 1,
+            answers: ["Only on leg exercises", "Never lock out", "It depends on the exercise", "Always fully lock"],
+            correctIndex: 2,
             explanation: "Some exercises benefit from lockout, others maintain tension by not fully locking."
         ),
         QuizQuestion(
             category: .technique,
             question: "What does 'mind-muscle connection' mean?",
-            answers: ["Thinking about muscles", "Consciously focusing on the working muscle", "Meditation", "Mental toughness"],
-            correctIndex: 1,
+            answers: ["Thinking about muscles", "Meditation", "Consciously focusing on the working muscle", "Mental toughness"],
+            correctIndex: 2,
             explanation: "Actively focusing on the muscle you're working improves activation and growth."
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the valsalva maneuver?",
-            answers: ["A stretching technique", "Holding breath and bracing during heavy lifts", "A warm-up exercise", "A cooldown method"],
-            correctIndex: 1,
+            answers: ["A warm-up exercise", "A cooldown method", "A stretching technique", "Holding breath and bracing during heavy lifts"],
+            correctIndex: 3,
             explanation: "The valsalva maneuver increases intra-abdominal pressure for spine stability during heavy lifts."
         ),
         QuizQuestion(
             category: .technique,
             question: "Should you train to failure on every set?",
-            answers: ["Yes, always", "No, training close to failure is usually sufficient", "Only on biceps", "Never"],
-            correctIndex: 1,
+            answers: ["No, training close to failure is usually sufficient", "Only on biceps", "Never", "Yes, always"],
+            correctIndex: 0,
             explanation: "Training to failure every set can lead to excessive fatigue - most sets should be close to failure."
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the proper squat depth?",
-            answers: ["Quarter squat", "Parallel or below", "Just bend slightly", "Touch the floor"],
+            answers: ["Just bend slightly", "Parallel or below", "Quarter squat", "Touch the floor"],
             correctIndex: 1,
             explanation: "Squatting to at least parallel (hip crease below knee) ensures full muscle engagement."
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the scapula's role in bench press?",
-            answers: ["No role", "Should be retracted and depressed", "Should be elevated", "Should move freely"],
-            correctIndex: 1,
+            answers: ["Should move freely", "Should be elevated", "No role", "Should be retracted and depressed"],
+            correctIndex: 3,
             explanation: "Retracting and depressing the scapula creates a stable base and protects shoulders."
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the 'dead' in deadlift?",
-            answers: ["Lifting while tired", "Starting from a dead stop on the floor", "A dangerous lift", "For advanced only"],
-            correctIndex: 1,
+            answers: ["Starting from a dead stop on the floor", "A dangerous lift", "For advanced only", "Lifting while tired"],
+            correctIndex: 0,
             explanation: "Each rep starts from a complete stop (dead weight) on the floor, hence 'dead' lift."
         ),
         QuizQuestion(
             category: .technique,
             question: "Should you bounce the bar off your chest during bench press?",
-            answers: ["Yes, for momentum", "No, control the weight", "Only when heavy", "Only for powerlifters"],
-            correctIndex: 1,
+            answers: ["No, control the weight", "Only when heavy", "Only for powerlifters", "Yes, for momentum"],
+            correctIndex: 0,
             explanation: "Bouncing can cause injury and reduces muscle tension - control the descent and press."
         ),
         QuizQuestion(
             category: .technique,
             question: "What is a 'neutral spine'?",
-            answers: ["A perfectly flat back", "Natural spinal curves maintained", "An arched back", "A rounded back"],
-            correctIndex: 1,
+            answers: ["Natural spinal curves maintained", "A perfectly flat back", "An arched back", "A rounded back"],
+            correctIndex: 0,
             explanation: "Neutral spine maintains the natural S-curve, crucial for safe lifting."
         ),
         QuizQuestion(
             category: .technique,
             question: "What does 'breaking at the hips' mean?",
-            answers: ["Injuring your hips", "Initiating movement by hinging at hips", "Stretching", "A dance move"],
-            correctIndex: 1,
+            answers: ["Stretching", "Injuring your hips", "A dance move", "Initiating movement by hinging at hips"],
+            correctIndex: 3,
             explanation: "Many exercises like squats and deadlifts should initiate with hip hinge movement."
         ),
         QuizQuestion(
             category: .technique,
             question: "Why is full range of motion important?",
-            answers: ["It's not", "Maximizes muscle fiber recruitment and growth", "Looks better", "Takes longer"],
-            correctIndex: 1,
+            answers: ["Looks better", "Takes longer", "Maximizes muscle fiber recruitment and growth", "It's not"],
+            correctIndex: 2,
             explanation: "Full ROM ensures complete muscle activation and development throughout the entire muscle."
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the proper breathing for most exercises?",
-            answers: ["Hold breath entire time", "Exhale on exertion, inhale on return", "Breathe randomly", "Never breathe"],
+            answers: ["Breathe randomly", "Exhale on exertion, inhale on return", "Never breathe", "Hold breath entire time"],
             correctIndex: 1,
             explanation: "Exhaling during the hard part and inhaling during the easier part is generally optimal."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is a tempo prescription?",
+            answers: ["Workout duration", "Speed of each phase of a lift (eccentric/pause/concentric)", "Music speed", "Rest periods"],
+            correctIndex: 1,
+            explanation: "Tempo controls lifting speed, typically written as eccentric-pause-concentric-pause (e.g., 3-1-1-0)."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "Should you arch your back during bench press?",
+            answers: ["Never", "A slight arch is safe and increases stability", "Maximum arch always", "Only for powerlifters"],
+            correctIndex: 1,
+            explanation: "A natural arch maintains spinal position, reduces shoulder stress, and improves pressing power."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is the proper deadlift starting position?",
+            answers: ["Neutral spine, bar over mid-foot, shoulders over bar", "Rounded back", "Standing upright", "Any position"],
+            correctIndex: 0,
+            explanation: "Proper setup ensures safe, efficient force transfer from legs through the entire kinetic chain."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is a paused rep?",
+            answers: ["Holding position at a specific point to eliminate momentum", "Stopping early", "Resting mid-set", "Taking breaks"],
+            correctIndex: 0,
+            explanation: "Paused reps eliminate momentum and increase time under tension for greater muscle development."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "Should your knees go past your toes when squatting?",
+            answers: ["It's safe and often necessary for proper depth", "Only if you're tall", "Always avoid", "Never"],
+            correctIndex: 0,
+            explanation: "Knees traveling forward is natural and safe - individual anatomy determines the degree."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is the 'sticking point'?",
+            answers: ["Bad form", "Equipment issue", "Bar getting stuck", "Hardest portion of a lift's range of motion"],
+            correctIndex: 3,
+            explanation: "The sticking point is where leverage is poorest and lifts most commonly fail."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What does 'keeping tension' mean?",
+            answers: ["Tight grip", "Maintaining continuous muscle engagement throughout the set", "Being stressed", "Mental focus"],
+            correctIndex: 1,
+            explanation: "Constant tension maximizes muscle fiber recruitment and metabolic stress for growth."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is proper pull-up form?",
+            answers: ["Partial reps", "Kipping only", "Swinging", "Dead hang start, pull to chin/chest, controlled descent"],
+            correctIndex: 3,
+            explanation: "Strict pull-ups from dead hang maximize lat and arm development while preventing injury."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "Should you touch chest in a push-up?",
+            answers: ["Stay high", "Yes, for full range of motion", "No, dangerous", "Only nose"],
+            correctIndex: 1,
+            explanation: "Touching chest ensures full ROM and maximum pec, shoulder, and tricep activation."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is the proper row form?",
+            answers: ["Swing the weight", "Pull to neck", "Pull to forehead", "Pull to lower chest/upper abs with retracted shoulders"],
+            correctIndex: 3,
+            explanation: "Rowing to lower chest with scapular retraction maximally engages the back muscles."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is a 'clean' rep?",
+            answers: ["A rep performed with proper form and no momentum", "Washing equipment", "Olympic lift only", "Easy rep"],
+            correctIndex: 0,
+            explanation: "Clean reps use strict form without body english, momentum, or cheating for better results."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "Should you lock your elbows on overhead press?",
+            answers: ["Depends on mood", "Partial only", "Yes, full lockout is safe and completes ROM", "Never lock out"],
+            correctIndex: 2,
+            explanation: "Full elbow lockout is safe overhead and ensures complete shoulder and tricep engagement."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is unilateral training?",
+            answers: ["Training one limb at a time", "Bilateral only", "Using one side of body", "Partner training"],
+            correctIndex: 0,
+            explanation: "Unilateral training addresses muscle imbalances and improves single-leg/arm strength and stability."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is proper dip form?",
+            answers: ["Lean back", "Bounce at bottom", "Elbows flared wide", "Slight forward lean, elbows 45 degrees, controlled descent"],
+            correctIndex: 3,
+            explanation: "Proper dip form protects shoulders while maximizing chest and tricep development."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What does 'driving through heels' mean?",
+            answers: ["Pushing force through heels during leg exercises", "Wearing wrong shoes", "踩踏板", "Wearing heels"],
+            correctIndex: 0,
+            explanation: "Driving through heels optimally activates glutes and hamstrings while protecting knees."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is a negative/eccentric-only set?",
+            answers: ["Avoiding training", "Bad attitude", "Focusing only on the lowering phase of exercises", "Rest day"],
+            correctIndex: 2,
+            explanation: "Eccentric-only training causes greater muscle damage and can build strength and size effectively."
+        ),
+        QuizQuestion(
+            category: .technique,
+            question: "What is the 'false grip' in bench press?",
+            answers: ["Thumbless grip with thumbs alongside fingers", "Wrong grip", "Beginner mistake", "Weak grip"],
+            correctIndex: 0,
+            explanation: "False grip can increase wrist comfort but carries higher risk of bar slipping - use with caution."
         ),
     ]
     
@@ -643,3 +1280,4 @@ enum QuizData {
         return Array(categoryQuestions.shuffled().prefix(count))
     }
 }
+
