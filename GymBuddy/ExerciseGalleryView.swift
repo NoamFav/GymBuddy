@@ -1,0 +1,176 @@
+import SwiftUI
+
+
+struct ExerciseGalleryView: View {
+    @State private var selectedFilter: MuscleFilter = .all
+    @State private var searchText: String = ""
+
+    // Base grouping by category
+    private var groupedExercises: [ExerciseCategory: [Exercise]] {
+        let base = Dictionary(grouping: ExerciseData.all) { exercise in
+            category(for: exercise)
+        }
+
+        var sorted: [ExerciseCategory: [Exercise]] = [:]
+        for (key, value) in base {
+            sorted[key] = value.sorted { $0.name < $1.name }
+        }
+        return sorted
+    }
+
+    // Apply category filter + search on top
+    private var filteredGroupedExercises: [ExerciseCategory: [Exercise]] {
+        let search = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        let targetCategory = selectedFilter.mappedCategory
+
+        var result: [ExerciseCategory: [Exercise]] = [:]
+
+        for (category, items) in groupedExercises {
+            // If a category is selected, skip others
+            if let target = targetCategory, category != target {
+                continue
+            }
+
+            let filteredItems: [Exercise]
+            if search.isEmpty {
+                filteredItems = items
+            } else {
+                filteredItems = items.filter { $0.name.lowercased().contains(search) }
+            }
+
+            if !filteredItems.isEmpty {
+                result[category] = filteredItems
+            }
+        }
+
+        return result
+    }
+
+    private let columns = [
+        GridItem(.flexible())
+    ]
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                LinearGradient(
+                    colors: [
+                        Color(red: 0.05, green: 0.05, blue: 0.15),
+                        Color(red: 0.1, green: 0.05, blue: 0.2),
+                        Color(red: 0.15, green: 0.1, blue: 0.25)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("Exercise Gallery")
+                            .font(.system(size: 28, weight: .bold, design: .rounded))
+                            .foregroundStyle(.white)
+                            .padding(.top, 24)
+
+                        Text("Filter by muscle group or search by name to quickly find the exercise you want to study.")
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundStyle(.white.opacity(0.6))
+
+                        // Segmented control
+                        Picker("Muscle Group", selection: $selectedFilter) {
+                            ForEach(MuscleFilter.allCases) { filter in
+                                Text(filter.rawValue).tag(filter)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+
+                        // Sections by category
+                        ForEach(ExerciseCategory.allCases) { category in
+                            if let items = filteredGroupedExercises[category],
+                               !items.isEmpty {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    Text(category.title)
+                                        .font(.system(size: 20, weight: .semibold))
+                                        .foregroundStyle(.white)
+                                        .padding(.horizontal, 2)
+
+                                    LazyVGrid(columns: columns, spacing: 16) {
+                                        ForEach(items) { exercise in
+                                            ExerciseGalleryCard(exercise: exercise)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 30)
+                }
+            }
+            .navigationTitle("Gallery")
+            .navigationBarTitleDisplayMode(.inline)
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .automatic),
+                prompt: "Search exercises"
+            )
+        }
+    }
+}
+
+struct ExerciseGalleryCard: View {
+    let exercise: Exercise
+
+    var body: some View {
+        VStack(spacing: 10) {
+            if let imageName = exercise.imageName {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 220)
+                    .clipShape(RoundedRectangle(cornerRadius: 18))
+                    .clipped()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 18)
+                            .stroke(Color.white.opacity(0.2), lineWidth: 1)
+                    )
+                    .shadow(radius: 8, y: 4)
+            } else {
+                // Fallback if some exercise has no image
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color.white.opacity(0.06))
+                    .frame(height: 220)
+                    .overlay(
+                        Text("No Image")
+                            .foregroundStyle(.white.opacity(0.6))
+                            .font(.system(size: 14, weight: .medium))
+                    )
+            }
+
+            Text(exercise.name)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 22)
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color.white.opacity(0.08),
+                            Color.white.opacity(0.04)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 22)
+                        .stroke(Color.white.opacity(0.18), lineWidth: 1)
+                )
+        )
+        .padding(.vertical, 4)
+    }
+}

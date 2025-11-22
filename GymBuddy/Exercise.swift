@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ExerciseInfo: Hashable {
+    let name: String
+    let imageName: String
+}

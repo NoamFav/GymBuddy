@@ -62,3 +62,41 @@ struct QuizQuestion: Identifiable {
         self.imageName = imageName
     }
 }
+
+enum AdvancedQuizCategory: String, CaseIterable, Identifiable {
+    case strength = "Strength & Power"
+    case hypertrophy = "Hypertrophy"
+    case endurance = "Muscular Endurance"
+    case mobility = "Mobility & Stability"
+    case compound = "Big Compound Lifts"
+    case isolation = "Isolation Work"
+    case conditioning = "Conditioning / Metabolic"
+
+    var id: String { rawValue }
+
+    var icon: String {
+        switch self {
+        case .strength: return "bolt.fill"
+        case .hypertrophy: return "dumbbell.fill"
+        case .endurance: return "figure.run"
+        case .mobility: return "figure.cooldown"
+        case .compound: return "square.stack.3d.up.fill"
+        case .isolation: return "target"
+        case .conditioning: return "flame.fill"
+        }
+    }
+
+    var gradient: [Color] {
+        switch self {
+        case .strength: return [Color(red: 0.9, green: 0.4, blue: 0.2), Color(red: 1.0, green: 0.6, blue: 0.3)]
+        case .hypertrophy: return [Color(red: 0.8, green: 0.2, blue: 0.6), Color(red: 0.95, green: 0.4, blue: 0.8)]
+        case .endurance: return [Color(red: 0.2, green: 0.6, blue: 0.9), Color(red: 0.4, green: 0.75, blue: 0.95)]
+        case .mobility: return [Color(red: 0.2, green: 0.8, blue: 0.6), Color(red: 0.4, green: 0.9, blue: 0.7)]
+        case .compound: return [Color(red: 0.6, green: 0.4, blue: 0.9), Color(red: 0.75, green: 0.55, blue: 0.95)]
+        case .isolation: return [Color(red: 0.9, green: 0.7, blue: 0.2), Color(red: 0.95, green: 0.8, blue: 0.4)]
+        case .conditioning: return [Color(red: 0.9, green: 0.3, blue: 0.3), Color(red: 1.0, green: 0.5, blue: 0.4)]
+        }
+    }
+}
+
+
