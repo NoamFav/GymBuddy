@@ -1,14 +1,25 @@
 import SwiftUI
 
 enum QuizCategory: String, CaseIterable, Identifiable {
-    case machines = "Machines"
-    case trivia = "Trivia"
-    case funFacts = "Fun Facts"
-    case science = "Science"
-    case nutrition = "Nutrition"
-    case technique = "Technique"
+    case machines = "machines"
+    case trivia = "trivia"
+    case funFacts = "funFacts"
+    case science = "science"
+    case nutrition = "nutrition"
+    case technique = "technique"
     
     var id: String { rawValue }
+    
+    var displayName: String {
+        switch self {
+        case .machines: return "Machines"
+        case .trivia: return "Trivia"
+        case .funFacts: return "Fun Facts"
+        case .science: return "Science"
+        case .nutrition: return "Nutrition"
+        case .technique: return "Technique"
+        }
+    }
     
     var icon: String {
         switch self {

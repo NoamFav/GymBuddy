@@ -1,59 +1,8 @@
 import SwiftUI
 
-// MARK: - User Statistics Model
-struct UserStats {
-    var totalQuizzes: Int = 0
-    var correctAnswers: Int = 0
-    var totalQuestions: Int = 0
-    var currentStreak: Int = 0
-    var bestStreak: Int = 0
-    var totalPoints: Int = 0
-    var level: Int = 1
-    var todayChallengeCompleted: Bool = false
-    var lastQuizDate: Date?
-    
-    var accuracy: Double {
-        guard totalQuestions > 0 else { return 0 }
-        return Double(correctAnswers) / Double(totalQuestions) * 100
-    }
-    
-    var nextLevelPoints: Int {
-        return level * 500
-    }
-    
-    var progressToNextLevel: Double {
-        let pointsInLevel = totalPoints % 500
-        return Double(pointsInLevel) / Double(nextLevelPoints)
-    }
-    
-    // Mock data for preview
-    static var mock: UserStats {
-        UserStats(
-            totalQuizzes: 47,
-            correctAnswers: 312,
-            totalQuestions: 470,
-            currentStreak: 7,
-            bestStreak: 12,
-            totalPoints: 3840,
-            level: 8,
-            todayChallengeCompleted: false,
-            lastQuizDate: Date()
-        )
-    }
-}
-
-// MARK: - Recent Quiz Result
-struct RecentQuizResult: Identifiable {
-    let id = UUID()
-    let category: String
-    let score: Int
-    let total: Int
-    let date: String
-    let gradient: [Color]
-}
-
 // MARK: - Dashboard View
 struct DashboardView: View {
+    @Binding var selectedTab: AppTab
     @State private var userStats = UserStats.mock // Replace with actual data source
     @State private var showingDailyChallenge = false
     
@@ -421,178 +370,33 @@ struct DashboardView: View {
                     title: "Browse Categories",
                     subtitle: "6 quiz categories",
                     gradient: [Color.red, Color.pink]
-                )
+                ) {
+                    selectedTab = .categories
+                }
                 
                 QuickActionButton(
                     icon: "line.3.horizontal.decrease.circle.fill",
                     title: "Training Focus",
                     subtitle: "Image-based challenges",
                     gradient: [Color.purple, Color.indigo]
-                )
+                ) {
+                    selectedTab = .focus
+                }
                 
                 QuickActionButton(
                     icon: "photo.on.rectangle.fill",
                     title: "Exercise Gallery",
                     subtitle: "160+ exercises",
                     gradient: [Color.blue, Color.cyan]
-                )
-            }
-        }
-    }
-}
-
-// MARK: - Stat Card Component
-struct StatCard: View {
-    let icon: String
-    let title: String
-    let value: String
-    let gradient: [Color]
-    
-    var body: some View {
-        VStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: gradient,
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .frame(width: 50, height: 50)
-                    .shadow(color: gradient[0].opacity(0.4), radius: 10, y: 5)
-                
-                Image(systemName: icon)
-                    .font(.system(size: 22, weight: .semibold))
-                    .foregroundStyle(.white)
-            }
-            
-            Text(value)
-                .font(.system(size: 24, weight: .bold, design: .rounded))
-                .foregroundStyle(.white)
-            
-            Text(title)
-                .font(.system(size: 12, weight: .medium))
-                .foregroundStyle(.white.opacity(0.6))
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 24)
-        .glassCard(cornerRadius: 20)
-    }
-}
-
-// MARK: - Recent Quiz Row Component
-struct RecentQuizRow: View {
-    let category: String
-    let score: Int
-    let total: Int
-    let date: String
-    let gradient: [Color]
-    
-    var accuracy: Double {
-        Double(score) / Double(total) * 100
-    }
-    
-    var body: some View {
-        HStack(spacing: 14) {
-            Circle()
-                .fill(
-                    LinearGradient(
-                        colors: gradient,
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .frame(width: 12, height: 12)
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text(category)
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(.white)
-                
-                Text(date)
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundStyle(.white.opacity(0.5))
-            }
-            
-            Spacer()
-            
-            VStack(alignment: .trailing, spacing: 4) {
-                Text("\(score)/\(total)")
-                    .font(.system(size: 15, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
-                
-                Text(String(format: "%.0f%%", accuracy))
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundStyle(accuracy >= 80 ? Color.green : (accuracy >= 60 ? Color.orange : Color.red))
-            }
-        }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white.opacity(0.05))
-        )
-    }
-}
-
-// MARK: - Quick Action Button Component
-struct QuickActionButton: View {
-    let icon: String
-    let title: String
-    let subtitle: String
-    let gradient: [Color]
-    
-    var body: some View {
-        Button(action: {}) {
-            HStack(spacing: 16) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 14)
-                        .fill(
-                            LinearGradient(
-                                colors: gradient,
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: 50, height: 50)
-                        .shadow(color: gradient[0].opacity(0.4), radius: 10, y: 5)
-                    
-                    Image(systemName: icon)
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundStyle(.white)
+                ) {
+                    selectedTab = .gallery
                 }
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(title)
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(.white)
-                    
-                    Text(subtitle)
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.6))
-                }
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(.white.opacity(0.4))
             }
-            .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color.white.opacity(0.05))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 18)
-                            .stroke(Color.white.opacity(0.1), lineWidth: 1)
-                    )
-            )
         }
-        .buttonStyle(.plain)
     }
 }
 
 // MARK: - Preview
 #Preview {
-    DashboardView()
+    ContentView()
 }

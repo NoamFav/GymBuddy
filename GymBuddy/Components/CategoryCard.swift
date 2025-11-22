@@ -33,7 +33,7 @@ struct CategoryCard: View {
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundStyle(.white)
                 
-                Text("\(QuizData.allQuestions.filter { $0.category == category }.count) questions")
+                Text("\(QuizManager.shared.allQuestions.filter { $0.category == category }.count) questions")
                     .font(.system(size: 13, weight: .medium))
                     .foregroundStyle(.white.opacity(0.5))
             }
