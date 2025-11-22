@@ -8,7 +8,8 @@ enum QuizData {
             question: "What muscle group does the leg press primarily target?",
             answers: ["Chest", "Quadriceps", "Shoulders", "Back"],
             correctIndex: 1,
-            explanation: "The leg press primarily works your quads, glutes, and hamstrings."
+            explanation: "The leg press primarily works your quads, glutes, and hamstrings.",
+            imageName: "seated-leg-press"
         ),
         QuizQuestion(
             category: .machines,
@@ -78,7 +79,8 @@ enum QuizData {
             question: "What does the seated row machine primarily target?",
             answers: ["Back and rear deltoids", "Legs", "Triceps", "Chest"],
             correctIndex: 0,
-            explanation: "Seated rows work the lats, rhomboids, traps, and rear deltoids."
+            explanation: "Seated rows work the lats, rhomboids, traps, and rear deltoids.",
+            imageName: "seated-machine-row"
         ),
         QuizQuestion(
             category: .machines,
@@ -92,7 +94,8 @@ enum QuizData {
             question: "What is the benefit of the preacher curl machine?",
             answers: ["Improves cardio", "Isolates biceps and prevents cheating", "Targets back", "Works legs"],
             correctIndex: 1,
-            explanation: "The preacher curl bench prevents momentum and isolates the biceps for better development."
+            explanation: "The preacher curl bench prevents momentum and isolates the biceps for better development.",
+            imageName: "preacher-curls"
         ),
         QuizQuestion(
             category: .machines,
@@ -106,7 +109,8 @@ enum QuizData {
             question: "What does the chest press machine simulate?",
             answers: ["Deadlifts", "Squats", "Pull-ups", "Bench press"],
             correctIndex: 3,
-            explanation: "The chest press machine mimics the bench press motion with added stability."
+            explanation: "The chest press machine mimics the bench press motion with added stability.",
+            imageName: "chest-press"
         ),
         QuizQuestion(
             category: .machines,
@@ -120,7 +124,8 @@ enum QuizData {
             question: "What does the hack squat machine emphasize?",
             answers: ["Quadriceps with reduced back strain", "Hamstrings only", "Upper back", "Chest"],
             correctIndex: 0,
-            explanation: "The hack squat allows heavy quad training while minimizing lower back involvement."
+            explanation: "The hack squat allows heavy quad training while minimizing lower back involvement.",
+            imageName: "hack-squat"
         ),
         QuizQuestion(
             category: .machines,
@@ -134,7 +139,8 @@ enum QuizData {
             question: "What is the primary benefit of the leg press over squats?",
             answers: ["Faster results", "Removes lower back from the equation", "Burns more calories", "Works more muscles"],
             correctIndex: 1,
-            explanation: "The leg press supports your back, allowing focus on legs without spinal loading."
+            explanation: "The leg press supports your back, allowing focus on legs without spinal loading.",
+            imageName: "seated-leg-press"
         ),
         QuizQuestion(
             category: .machines,
@@ -148,7 +154,8 @@ enum QuizData {
             question: "What does the T-bar row machine primarily work?",
             answers: ["Middle back and lats", "Legs", "Shoulders", "Chest"],
             correctIndex: 0,
-            explanation: "The T-bar row is excellent for building back thickness, targeting lats and rhomboids."
+            explanation: "The T-bar row is excellent for building back thickness, targeting lats and rhomboids.",
+            imageName: "t-bar-row"
         ),
         QuizQuestion(
             category: .machines,
@@ -162,7 +169,8 @@ enum QuizData {
             question: "What is the advantage of the assisted pull-up machine?",
             answers: ["Makes you weaker", "Helps build strength until unassisted pull-ups are possible", "No advantages", "Only for children"],
             correctIndex: 1,
-            explanation: "The assisted pull-up machine counterbalances your weight, helping you progress to unassisted pull-ups."
+            explanation: "The assisted pull-up machine counterbalances your weight, helping you progress to unassisted pull-ups.",
+            imageName: "assisted-pull-ups"
         ),
         QuizQuestion(
             category: .machines,
@@ -176,7 +184,8 @@ enum QuizData {
             question: "What does the hyperextension bench primarily target?",
             answers: ["Biceps", "Lower back and glutes", "Calves", "Chest"],
             correctIndex: 1,
-            explanation: "Hyperextensions strengthen the erector spinae, glutes, and hamstrings."
+            explanation: "Hyperextensions strengthen the erector spinae, glutes, and hamstrings.",
+            imageName: "hyperextension-on-the-bench"
         ),
         QuizQuestion(
             category: .machines,
@@ -204,7 +213,8 @@ enum QuizData {
             question: "What does the incline bench press machine emphasize?",
             answers: ["Lower chest", "Upper chest and front delts", "Legs", "Back"],
             correctIndex: 1,
-            explanation: "Incline pressing shifts emphasis to the clavicular (upper) portion of the chest."
+            explanation: "Incline pressing shifts emphasis to the clavicular (upper) portion of the chest.",
+            imageName: "incline-chest-press"
         ),
         QuizQuestion(
             category: .machines,
@@ -374,7 +384,8 @@ enum QuizData {
             question: "Who holds the world record for heaviest deadlift?",
             answers: ["Eddie Hall", "Hafthor Bjornsson", "Zydrunas Savickas", "Brian Shaw"],
             correctIndex: 1,
-            explanation: "Hafthor Bjornsson deadlifted 501 kg (1,104.5 lbs) in 2020, breaking Eddie Hall's record."
+            explanation: "Hafthor Bjornsson deadlifted 501 kg (1,104.5 lbs) in 2020, breaking Eddie Hall's record.",
+            imageName: "deadlift"
         ),
         QuizQuestion(
             category: .trivia,
@@ -423,7 +434,8 @@ enum QuizData {
             question: "What is 'Smolov' in powerlifting?",
             answers: ["A stretching routine", "An intense squat program", "A protein brand", "A gym location"],
             correctIndex: 1,
-            explanation: "Smolov is a brutal Russian squat program designed for rapid strength gains."
+            explanation: "Smolov is a brutal Russian squat program designed for rapid strength gains.",
+            imageName: "barbell-squats"
         ),
         
         // Fun Facts (30 questions)
@@ -1103,28 +1115,32 @@ enum QuizData {
             question: "What is the proper squat depth?",
             answers: ["Just bend slightly", "Parallel or below", "Quarter squat", "Touch the floor"],
             correctIndex: 1,
-            explanation: "Squatting to at least parallel (hip crease below knee) ensures full muscle engagement."
+            explanation: "Squatting to at least parallel (hip crease below knee) ensures full muscle engagement.",
+            imageName: "barbell-squats"
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the scapula's role in bench press?",
             answers: ["Should move freely", "Should be elevated", "No role", "Should be retracted and depressed"],
             correctIndex: 3,
-            explanation: "Retracting and depressing the scapula creates a stable base and protects shoulders."
+            explanation: "Retracting and depressing the scapula creates a stable base and protects shoulders.",
+            imageName: "bench-press"
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the 'dead' in deadlift?",
             answers: ["Starting from a dead stop on the floor", "A dangerous lift", "For advanced only", "Lifting while tired"],
             correctIndex: 0,
-            explanation: "Each rep starts from a complete stop (dead weight) on the floor, hence 'dead' lift."
+            explanation: "Each rep starts from a complete stop (dead weight) on the floor, hence 'dead' lift.",
+            imageName: "deadlift"
         ),
         QuizQuestion(
             category: .technique,
             question: "Should you bounce the bar off your chest during bench press?",
             answers: ["No, control the weight", "Only when heavy", "Only for powerlifters", "Yes, for momentum"],
             correctIndex: 0,
-            explanation: "Bouncing can cause injury and reduces muscle tension - control the descent and press."
+            explanation: "Bouncing can cause injury and reduces muscle tension - control the descent and press.",
+            imageName: "bench-press"
         ),
         QuizQuestion(
             category: .technique,
@@ -1138,7 +1154,8 @@ enum QuizData {
             question: "What does 'breaking at the hips' mean?",
             answers: ["Stretching", "Injuring your hips", "A dance move", "Initiating movement by hinging at hips"],
             correctIndex: 3,
-            explanation: "Many exercises like squats and deadlifts should initiate with hip hinge movement."
+            explanation: "Many exercises like squats and deadlifts should initiate with hip hinge movement.",
+            imageName: "romanian-deadlift"
         ),
         QuizQuestion(
             category: .technique,
@@ -1166,14 +1183,16 @@ enum QuizData {
             question: "Should you arch your back during bench press?",
             answers: ["Never", "A slight arch is safe and increases stability", "Maximum arch always", "Only for powerlifters"],
             correctIndex: 1,
-            explanation: "A natural arch maintains spinal position, reduces shoulder stress, and improves pressing power."
+            explanation: "A natural arch maintains spinal position, reduces shoulder stress, and improves pressing power.",
+            imageName: "bench-press"
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the proper deadlift starting position?",
             answers: ["Neutral spine, bar over mid-foot, shoulders over bar", "Rounded back", "Standing upright", "Any position"],
             correctIndex: 0,
-            explanation: "Proper setup ensures safe, efficient force transfer from legs through the entire kinetic chain."
+            explanation: "Proper setup ensures safe, efficient force transfer from legs through the entire kinetic chain.",
+            imageName: "deadlift"
         ),
         QuizQuestion(
             category: .technique,
@@ -1187,7 +1206,8 @@ enum QuizData {
             question: "Should your knees go past your toes when squatting?",
             answers: ["It's safe and often necessary for proper depth", "Only if you're tall", "Always avoid", "Never"],
             correctIndex: 0,
-            explanation: "Knees traveling forward is natural and safe - individual anatomy determines the degree."
+            explanation: "Knees traveling forward is natural and safe - individual anatomy determines the degree.",
+            imageName: "squats"
         ),
         QuizQuestion(
             category: .technique,
@@ -1208,21 +1228,24 @@ enum QuizData {
             question: "What is proper pull-up form?",
             answers: ["Partial reps", "Kipping only", "Swinging", "Dead hang start, pull to chin/chest, controlled descent"],
             correctIndex: 3,
-            explanation: "Strict pull-ups from dead hang maximize lat and arm development while preventing injury."
+            explanation: "Strict pull-ups from dead hang maximize lat and arm development while preventing injury.",
+            imageName: "pull-ups"
         ),
         QuizQuestion(
             category: .technique,
             question: "Should you touch chest in a push-up?",
             answers: ["Stay high", "Yes, for full range of motion", "No, dangerous", "Only nose"],
             correctIndex: 1,
-            explanation: "Touching chest ensures full ROM and maximum pec, shoulder, and tricep activation."
+            explanation: "Touching chest ensures full ROM and maximum pec, shoulder, and tricep activation.",
+            imageName: "push-ups"
         ),
         QuizQuestion(
             category: .technique,
             question: "What is the proper row form?",
             answers: ["Swing the weight", "Pull to neck", "Pull to forehead", "Pull to lower chest/upper abs with retracted shoulders"],
             correctIndex: 3,
-            explanation: "Rowing to lower chest with scapular retraction maximally engages the back muscles."
+            explanation: "Rowing to lower chest with scapular retraction maximally engages the back muscles.",
+            imageName: "barbell-row"
         ),
         QuizQuestion(
             category: .technique,
@@ -1236,28 +1259,32 @@ enum QuizData {
             question: "Should you lock your elbows on overhead press?",
             answers: ["Depends on mood", "Partial only", "Yes, full lockout is safe and completes ROM", "Never lock out"],
             correctIndex: 2,
-            explanation: "Full elbow lockout is safe overhead and ensures complete shoulder and tricep engagement."
+            explanation: "Full elbow lockout is safe overhead and ensures complete shoulder and tricep engagement.",
+            imageName: "dumbbell-shoulder-press"
         ),
         QuizQuestion(
             category: .technique,
             question: "What is unilateral training?",
             answers: ["Training one limb at a time", "Bilateral only", "Using one side of body", "Partner training"],
             correctIndex: 0,
-            explanation: "Unilateral training addresses muscle imbalances and improves single-leg/arm strength and stability."
+            explanation: "Unilateral training addresses muscle imbalances and improves single-leg/arm strength and stability.",
+            imageName: "single-arm-dumbbell-row"
         ),
         QuizQuestion(
             category: .technique,
             question: "What is proper dip form?",
             answers: ["Lean back", "Bounce at bottom", "Elbows flared wide", "Slight forward lean, elbows 45 degrees, controlled descent"],
             correctIndex: 3,
-            explanation: "Proper dip form protects shoulders while maximizing chest and tricep development."
+            explanation: "Proper dip form protects shoulders while maximizing chest and tricep development.",
+            imageName: "dips"
         ),
         QuizQuestion(
             category: .technique,
             question: "What does 'driving through heels' mean?",
             answers: ["Pushing force through heels during leg exercises", "Wearing wrong shoes", "踩踏板", "Wearing heels"],
             correctIndex: 0,
-            explanation: "Driving through heels optimally activates glutes and hamstrings while protecting knees."
+            explanation: "Driving through heels optimally activates glutes and hamstrings while protecting knees.",
+            imageName: "barbell-squats"
         ),
         QuizQuestion(
             category: .technique,
@@ -1271,7 +1298,8 @@ enum QuizData {
             question: "What is the 'false grip' in bench press?",
             answers: ["Thumbless grip with thumbs alongside fingers", "Wrong grip", "Beginner mistake", "Weak grip"],
             correctIndex: 0,
-            explanation: "False grip can increase wrist comfort but carries higher risk of bar slipping - use with caution."
+            explanation: "False grip can increase wrist comfort but carries higher risk of bar slipping - use with caution.",
+            imageName: "bench-press"
         ),
     ]
     
@@ -1280,4 +1308,3 @@ enum QuizData {
         return Array(categoryQuestions.shuffled().prefix(count))
     }
 }
-

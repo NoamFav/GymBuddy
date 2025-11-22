@@ -2,18 +2,12 @@ import SwiftUI
 
 struct QuizView: View {
     let category: QuizCategory
-    let questions: [QuizQuestion]
-    
+    @State private var questions: [QuizQuestion] = []
     @State private var currentIndex = 0
     @State private var selectedAnswer: Int? = nil
     @State private var score = 0
     @State private var showingResult = false
     @Environment(\.dismiss) var dismiss
-    
-    init(category: QuizCategory) {
-        self.category = category
-        self.questions = QuizData.questions(for: category, count: 10)
-    }
     
     var currentQuestion: QuizQuestion? {
         questions.indices.contains(currentIndex) ? questions[currentIndex] : nil
@@ -24,7 +18,8 @@ struct QuizView: View {
     }
     
     var progress: Double {
-        Double(currentIndex) / Double(questions.count)
+        guard questions.count > 0 else { return 0 }
+        return Double(currentIndex) / Double(questions.count)
     }
     
     var body: some View {
@@ -313,6 +308,13 @@ struct QuizView: View {
                         .foregroundStyle(.white)
                 }
             }
+        }
+        .onAppear {
+            questions = QuizData.questions(for: category, count: 10)
+            currentIndex = 0
+            selectedAnswer = nil
+            score = 0
+            showingResult = false
         }
     }
     

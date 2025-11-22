@@ -7,7 +7,8 @@ struct CompletionView: View {
     let onDismiss: () -> Void
     
     var percentage: Double {
-        Double(score) / Double(total) * 100
+        guard total > 0 else { return 0 }
+        return Double(score) / Double(total) * 100
     }
     
     var performanceIcon: String {
