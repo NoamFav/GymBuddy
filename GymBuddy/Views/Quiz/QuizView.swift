@@ -324,18 +324,36 @@ struct QuizView: View {
         selectedAnswer = index
         showingResult = true
         
-        if index == currentQuestion?.correctIndex {
+        // Check if answer is correct
+        let isCorrect = index == currentQuestion?.correctIndex
+        
+        if isCorrect {
             score += 1
+            // Play success sound and haptic
+            SoundManager.shared.play(.correct)
+            SoundManager.shared.playNotificationHaptic(.success)
+        } else {
+            // Play error sound and haptic
+            SoundManager.shared.play(.wrong)
+            SoundManager.shared.playNotificationHaptic(.error)
         }
     }
-    
+
     private func nextQuestion() {
+        // Play tap sound
+        SoundManager.shared.play(.buttonTap)
+        SoundManager.shared.playHaptic(.light)
+        
         guard currentIndex < questions.count - 1 else {
-            // last question → mark quiz complete
+            // Quiz complete - play completion sound
+            SoundManager.shared.play(.completion)
+            SoundManager.shared.playNotificationHaptic(.success)
+            
             currentIndex = questions.count
             showingResult = false
             return
         }
+        
         currentIndex += 1
         selectedAnswer = nil
         showingResult = false

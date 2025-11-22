@@ -48,6 +48,9 @@ struct AnswerButton: View {
     
     var body: some View {
         Button(action: {
+            // Play tap haptic
+            SoundManager.shared.playHaptic(.light)
+            
             isPressed = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 isPressed = false

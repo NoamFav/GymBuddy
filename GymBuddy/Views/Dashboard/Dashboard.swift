@@ -391,6 +391,7 @@ struct DashboardView: View {
                 ) {
                     selectedTab = .gallery
                 }
+                SoundToggleButton()
             }
         }
     }

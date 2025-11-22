@@ -12,6 +12,10 @@ struct GymBuddyApp: App {
     @StateObject private var quizManager = QuizManager.shared
     @State private var isLoading = true
     
+    init() {
+        SoundManager.shared.loadSoundPreference()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ZStack {

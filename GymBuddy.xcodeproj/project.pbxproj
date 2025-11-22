@@ -27,6 +27,12 @@
 		B96CA58F2ED12DF40041BE94 /* GymBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96CA59C2ED12DF50041BE94 /* GymBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96CA5A62ED12DF50041BE94 /* GymBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D0A90D2ED2583D00EB6486 /* completion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = completion.mp3; sourceTree = "<group>"; };
+		B9D0A90E2ED2583D00EB6486 /* completion_duo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = completion_duo.mp3; sourceTree = "<group>"; };
+		B9D0A90F2ED2583D00EB6486 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		B9D0A9112ED2583D00EB6486 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
+		B9D0A9122ED2583D00EB6486 /* tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tap.mp3; sourceTree = "<group>"; };
+		B9D0A9132ED2583D00EB6486 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +81,7 @@
 		B96CA5862ED12DF40041BE94 = {
 			isa = PBXGroup;
 			children = (
+				B9D0A90C2ED2582D00EB6486 /* Sounds */,
 				B96CA5912ED12DF40041BE94 /* GymBuddy */,
 				B96CA59F2ED12DF50041BE94 /* GymBuddyTests */,
 				B96CA5A92ED12DF50041BE94 /* GymBuddyUITests */,
@@ -90,6 +97,19 @@
 				B96CA5A62ED12DF50041BE94 /* GymBuddyUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B9D0A90C2ED2582D00EB6486 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B9D0A90D2ED2583D00EB6486 /* completion.mp3 */,
+				B9D0A90E2ED2583D00EB6486 /* completion_duo.mp3 */,
+				B9D0A90F2ED2583D00EB6486 /* correct.mp3 */,
+				B9D0A9112ED2583D00EB6486 /* swipe.mp3 */,
+				B9D0A9122ED2583D00EB6486 /* tap.mp3 */,
+				B9D0A9132ED2583D00EB6486 /* wrong.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
