@@ -3,7 +3,7 @@ import SwiftUI
 // MARK: - Dashboard View
 struct DashboardView: View {
     @Binding var selectedTab: AppTab
-    @State private var userStats = UserStats.mock // Replace with actual data source
+    @State private var userStats = UserStats.mock
     @State private var showingDailyChallenge = false
     
     var body: some View {
